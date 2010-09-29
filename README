@@ -1,0 +1,28 @@
+tickr
+~~~~~
+
+there's quite a bunch of SW with that name out there.
+this one:
+- picks a random picture from a random day out of the daily top500
+  of flickr and displays it.
+- a tickr.html history file is kept with thumbnails and links to the
+  largest format of that image and the flickr URL showing that image.
+
+license
+~~~~~~~
+see the file LICENSE. it's GPL v2
+
+BUGS
+~~~~
+
+you have to enter the current year in the source script
+
+this is my 2nd implementation of the same thing. the 1st one was in perl.
+but there's also a 3rd implementation which is portable over all posix
+shells, but I don't have it here right now. V3 also runs on busybox's ash
+alone and is suitable for embedded devices. I will add it once I run over it
+in my backup, or my USB keyboard currently at work makes it back home so I
+can rip the script of the picture frame hanging on my wall for 4 years now.
+
+I don't have my source for jpegsize handy, it just prints the "X Y MP\n"
+of the image. guess I should add the sources to comply with my license.
