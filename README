@@ -24,5 +24,10 @@ alone and is suitable for embedded devices. I will add it once I run over it
 in my backup, or my USB keyboard currently at work makes it back home so I
 can rip the script of the picture frame hanging on my wall for 4 years now.
 
-I don't have my source for jpegsize handy, it just prints the "X Y MP\n"
-of the image. guess I should add the sources to comply with my license.
+jpegsize prints the "X Y MP\n" of the jpg image provided as argument.
+jpegsize [ -x | -y | -m ] image.jpg
+	print the width and height and megapixels of an image
+	-x  print only width
+	-y  print only height
+	-m  print only megapixels
+
