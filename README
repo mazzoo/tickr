@@ -3,10 +3,30 @@ tickr
 
 there's quite a bunch of SW with that name out there.
 this one:
-- picks a random picture from a random day out of the daily top500
-  of flickr and displays it.
+- picks a random picture from a random day out of the daily explore
+  page of flickr and displays it.
 - a tickr.html history file is kept with thumbnails and links to the
   largest format of that image and the flickr URL showing that image.
+
+I run it on an embedded PC which hangs on my wall with a display
+an an ancient baroque style frame.
+around end of 2012 flick broke all backward compatibility, an I
+fixed it again in tickr.sh
+
+I kept being asked whether I can show some pic of my PC on my picture
+frame hanging on the wall. This implementation also allows this by scp'ing
+(or whatever) /tmp/remote.jpg and touching a /tmp/remote.tag on the
+picture frame.
+
+this implementation is portable over all posix shells. Basically this means
+that it also runs on busybox's ash alone and is suitable for embedded devices.
+
+jpegsize prints the "X Y MP\n" of the jpg image provided as argument.
+jpegsize [ -x | -y | -m ] image.jpg
+	print the width and height and megapixels of an image
+	-x  print only width
+	-y  print only height
+	-m  print only megapixels
 
 license
 ~~~~~~~
@@ -16,18 +36,4 @@ BUGS
 ~~~~
 
 you have to enter the current year in the source script
-
-this is my 2nd implementation of the same thing. the 1st one was in perl.
-but there's also a 3rd implementation which is portable over all posix
-shells, but I don't have it here right now. V3 also runs on busybox's ash
-alone and is suitable for embedded devices. I will add it once I run over it
-in my backup, or my USB keyboard currently at work makes it back home so I
-can rip the script of the picture frame hanging on my wall for 4 years now.
-
-jpegsize prints the "X Y MP\n" of the jpg image provided as argument.
-jpegsize [ -x | -y | -m ] image.jpg
-	print the width and height and megapixels of an image
-	-x  print only width
-	-y  print only height
-	-m  print only megapixels
 
